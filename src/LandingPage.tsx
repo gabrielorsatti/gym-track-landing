@@ -132,33 +132,15 @@ nav.scrolled {
 
 /* PHONE */
 .phone {
-  width: 260px; background: var(--bg-white); border-radius: 32px;
-  border: 1px solid var(--border); overflow: hidden; margin: 0 auto; position: relative; z-index: 1;
+  width: 280px; background: var(--bg-white); border-radius: 32px;
+  border: 8px solid var(--bg-dark); overflow: hidden; margin: 0 auto; position: relative; z-index: 1;
   box-shadow: 0 32px 64px rgba(0,0,0,0.12), 0 8px 16px rgba(0,0,0,0.06);
 }
-.phone-bar { background: var(--bg-dark); padding: 14px 16px; display: flex; align-items: center; justify-content: space-between; }
-.phone-bar-title { font-size: 13px; font-weight: 700; color: #fff; }
-.phone-bar-badge { background: var(--accent); border-radius: 99px; padding: 2px 8px; font-size: 10px; font-weight: 700; color: #fff; }
-.phone-body { padding: 14px; }
-.phone-section-title { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 8px; }
-.phone-row {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 10px 12px; background: var(--bg); border-radius: 8px; margin-bottom: 6px; border: 1px solid var(--border);
+.phone img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
-.phone-row-label { font-size: 12px; color: var(--text-muted); font-weight: 500; }
-.phone-row-val { font-size: 14px; font-weight: 700; font-variant-numeric: tabular-nums; }
-.phone-row-pr { color: var(--amber); }
-.phone-chart { display: flex; align-items: flex-end; gap: 3px; height: 48px; margin: 10px 0; }
-.phone-bar-item { flex: 1; border-radius: 2px 2px 0 0; background: var(--accent); opacity: 0.25; }
-.phone-bar-item.hi { opacity: 1; }
-.phone-bar-item.med { opacity: 0.6; }
-.phone-coach { background: var(--accent-light); border-radius: 8px 8px 8px 2px; padding: 9px 11px; margin-top: 10px; }
-.phone-coach-name { font-size: 10px; font-weight: 700; color: var(--accent); margin-bottom: 3px; letter-spacing: 0.04em; text-transform: uppercase; }
-.phone-coach-text { font-size: 11px; color: #4C1D95; line-height: 1.5; }
-.phone-xp { margin-top: 10px; }
-.phone-xp-top { display: flex; justify-content: space-between; font-size: 10px; color: var(--text-dim); margin-bottom: 4px; }
-.phone-xp-bar { height: 4px; background: var(--border); border-radius: 99px; overflow: hidden; }
-.phone-xp-fill { height: 100%; background: var(--accent); border-radius: 99px; width: 62%; }
 
 /* MARQUEE */
 .marquee-wrap { background: var(--accent); overflow: hidden; padding: 14px 0; white-space: nowrap; }
@@ -235,24 +217,8 @@ nav.scrolled {
 #social { padding: 100px 0; background: var(--bg-white); }
 .social-inner { display: grid; grid-template-columns: 5fr 4fr; gap: 80px; align-items: center; }
 .social-desc { font-size: 17px; color: var(--text-muted); line-height: 1.7; margin-bottom: 36px; max-width: 440px; }
-.feed { border: 1.5px solid var(--border); border-radius: 8px; overflow: hidden; background: var(--bg-white); }
-.feed-nav { background: var(--bg); padding: 12px 18px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: var(--text); }
-.feed-post { padding: 18px; border-bottom: 1px solid var(--border); }
-.feed-post:last-child { border-bottom: none; }
-.post-head { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-.post-av { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; color: #fff; flex-shrink: 0; font-family: 'Barlow Condensed', sans-serif; }
-.post-av-name { font-size: 14px; font-weight: 700; }
-.post-av-time { font-size: 12px; color: var(--text-dim); }
-.post-pr { display: inline-flex; align-items: center; gap: 4px; background: var(--amber-light); border-radius: 3px; padding: 2px 7px; font-size: 11px; font-weight: 700; color: var(--amber); margin-left: auto; flex-shrink: 0; }
-.post-text { font-size: 13px; color: var(--text-muted); margin-bottom: 10px; line-height: 1.6; }
-.post-stats { display: flex; gap: 20px; background: var(--bg); border-radius: 6px; padding: 10px 14px; margin-bottom: 10px; }
-.post-stat-n { font-size: 15px; font-weight: 700; font-variant-numeric: tabular-nums; }
-.post-stat-k { font-size: 11px; color: var(--text-dim); font-weight: 500; }
-.post-actions { display: flex; gap: 14px; }
-.post-action { display: flex; align-items: center; gap: 5px; font-size: 13px; font-weight: 500; color: var(--text-dim); cursor: pointer; transition: color 0.15s; }
-.post-action:hover { color: var(--accent); }
-.post-action.kudos { color: var(--accent); }
-.post-action svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.feed { border: 1.5px solid var(--border); border-radius: 12px; overflow: hidden; background: var(--bg-white); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+.feed img { width: 100%; height: auto; display: block; }
 
 /* GREEN */
 #green { padding: 100px 0; background: var(--bg); border-top: 1.5px solid var(--text); }
@@ -487,11 +453,6 @@ function Nav() {
    HERO
 ───────────────────────────────────────────── */
 function Hero() {
-  const bars = [
-    { h: "40%", cls: "" }, { h: "55%", cls: "med" }, { h: "45%", cls: "" },
-    { h: "65%", cls: "med" }, { h: "60%", cls: "" }, { h: "72%", cls: "med" },
-    { h: "100%", cls: "hi" },
-  ];
   return (
     <section id="hero">
       <div className="hero-left">
@@ -523,27 +484,7 @@ function Hero() {
 
       <div className="hero-right">
         <div className="phone">
-          <div className="phone-bar">
-            <span className="phone-bar-title">Alexandre 👋</span>
-            <span className="phone-bar-badge">⚡ Lv.4</span>
-          </div>
-          <div className="phone-body">
-            <div className="phone-section-title">Cette semaine</div>
-            <div className="phone-row"><span className="phone-row-label">Volume total</span><span className="phone-row-val">12 400 kg</span></div>
-            <div className="phone-row"><span className="phone-row-label">Développé couché</span><span className="phone-row-val phone-row-pr">🏆 100 kg</span></div>
-            <div className="phone-row"><span className="phone-row-label">Streak</span><span className="phone-row-val">🔥 7 sem.</span></div>
-            <div className="phone-chart">
-              {bars.map((b, i) => <div key={i} className={`phone-bar-item${b.cls ? ` ${b.cls}` : ""}`} style={{ height: b.h }} />)}
-            </div>
-            <div className="phone-coach">
-              <div className="phone-coach-name">Stéphane IA</div>
-              <div className="phone-coach-text">Ton volume Push est en hausse de 12% sur 4 semaines. Augmente la charge au squat de +2.5 kg la semaine prochaine.</div>
-            </div>
-            <div className="phone-xp">
-              <div className="phone-xp-top"><span>XP vers Confirmé</span><span>1 240 / 1 600</span></div>
-              <div className="phone-xp-bar"><div className="phone-xp-fill" /></div>
-            </div>
-          </div>
+          <img src="capture1.jpeg" alt="Capture d'écran de l'application Gym Track" />
         </div>
       </div>
     </section>
@@ -702,43 +643,7 @@ function Social() {
           </div>
 
           <div className="feed reveal">
-            <div className="feed-nav">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
-              Feed amis
-            </div>
-            <div className="feed-post">
-              <div className="post-head">
-                <div className="post-av" style={{ background: "linear-gradient(135deg,#7C3AED,#A78BFA)" }}>ML</div>
-                <div><div className="post-av-name">Marie L.</div><div className="post-av-time">Il y a 1 h</div></div>
-                <div className="post-pr">🏆 PR</div>
-              </div>
-              <div className="post-text">Nouveau record au soulevé de terre ! 120 kg × 3. Les 3 mois de travail paient enfin 💪</div>
-              <div className="post-stats">
-                <div><div className="post-stat-n">120 kg</div><div className="post-stat-k">Charge max</div></div>
-                <div><div className="post-stat-n">4 800 kg</div><div className="post-stat-k">Volume</div></div>
-                <div><div className="post-stat-n">52 min</div><div className="post-stat-k">Durée</div></div>
-              </div>
-              <div className="post-actions">
-                <div className="post-action kudos"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>14 kudos</div>
-                <div className="post-action"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></svg>3 commentaires</div>
-              </div>
-            </div>
-            <div className="feed-post">
-              <div className="post-head">
-                <div className="post-av" style={{ background: "linear-gradient(135deg,#059669,#34D399)" }}>SR</div>
-                <div><div className="post-av-name">Samuel R.</div><div className="post-av-time">Il y a 3 h</div></div>
-              </div>
-              <div className="post-text">Run du matin en zone 2, méditation en mouvement. La régularité avant tout.</div>
-              <div className="post-stats">
-                <div><div className="post-stat-n">8.2 km</div><div className="post-stat-k">Distance</div></div>
-                <div><div className="post-stat-n">5'12"</div><div className="post-stat-k">Allure /km</div></div>
-                <div><div className="post-stat-n">42 min</div><div className="post-stat-k">Durée</div></div>
-              </div>
-              <div className="post-actions">
-                <div className="post-action"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>7 kudos</div>
-                <div className="post-action"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></svg>1 commentaire</div>
-              </div>
-            </div>
+            <img src="capture2.png" alt="Flux social de l'application Gym Track" />
           </div>
         </div>
       </div>
