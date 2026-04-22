@@ -628,7 +628,7 @@ function Social() {
     <section id="social">
       <div className="container">
         {/* On change le ratio : 1fr pour le texte, 1.2fr pour l'image (au lieu du 5fr/4fr initial) */}
-        <div className="social-inner" style={{ gridTemplateColumns: "1fr 1.2fr", gap: "40px" }}>
+        <div className="social-inner" style={{ gridTemplateColumns: "1fr 1.45fr", gap: "40px" }}>
           <div className="reveal">
             <div className="label" style={{ marginBottom: 16 }}>Social</div>
             <h2 className="display display-md" style={{ marginBottom: 20 }}>La progression<br />se partage</h2>
