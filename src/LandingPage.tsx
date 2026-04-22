@@ -136,12 +136,11 @@ nav.scrolled {
   max-width: 280px;
   background: var(--bg-white);
   border-radius: 32px;
-  border: 5px solid rgba(167, 139, 250, 0.4); /* Contour mauve élégant */
+  border: 5px solid rgba(167, 139, 250, 0.4); 
   overflow: hidden;
   margin: 0 auto;
   position: relative;
   z-index: 1;
-  /* Ombre : liseré net + halo violet + ombre profonde */
   box-shadow: 0 0 0 1px rgba(167, 139, 250, 0.2), 
               0 20px 40px rgba(109, 40, 217, 0.15), 
               0 8px 16px rgba(0,0,0,0.05);
@@ -150,7 +149,7 @@ nav.scrolled {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 27px; /* Arrondi ajusté pour suivre la coque */
+  border-radius: 27px; 
 }
 
 /* MARQUEE */
@@ -224,32 +223,173 @@ nav.scrolled {
 .chat-chip { background: rgba(167,139,250,0.08); border: 1px solid rgba(167,139,250,0.18); border-radius: 99px; padding: 5px 12px; font-size: 12px; color: #A78BFA; cursor: pointer; }
 .chat-disclaimer { padding: 10px 18px; border-top: 1px solid rgba(255,255,255,0.05); font-size: 11px; color: rgba(255,255,255,0.25); display: flex; align-items: center; gap: 6px; }
 
-/* SOCIAL (Capture 2) */
+/* SOCIAL */
 #social { padding: 100px 0; background: var(--bg-white); }
 .social-inner { 
   display: grid; 
-  /* Sur ordinateur, l'image occupe 1.3 fois l'espace du texte */
-  grid-template-columns: 1fr 1.3fr; 
+  grid-template-columns: 1fr 1.45fr; 
   gap: 60px; 
   align-items: center; 
 }
 .social-desc { font-size: 17px; color: var(--text-muted); line-height: 1.7; margin-bottom: 36px; max-width: 440px; }
-.feed { 
-  border: 4px solid rgba(167, 139, 250, 0.3); /* Contour mauve élégant */
+
+/* REPRODUCTION DU FEED "FAKE APP" */
+.fake-app-wrapper {
+  border: 4px solid rgba(167, 139, 250, 0.3); 
   border-radius: 16px; 
-  overflow: hidden; 
-  background: var(--bg-white); 
-  /* Ombre : halo violet + ombre profonde */
+  background: #F9FAFB; /* Fond très clair comme dans l'app */
   box-shadow: 0 0 0 1px rgba(167, 139, 250, 0.15), 
               0 24px 48px rgba(109, 40, 217, 0.12);
   width: 100%;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
-.feed img { 
-  width: 100%; 
-  height: auto; 
-  display: block; 
-  border-radius: 12px; /* Arrondi pour suivre le cadre mauve */
+.fake-app-header {
+  padding: 16px 20px;
+  font-weight: 700;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  border-bottom: 1px solid #E5E7EB;
+  background: #fff;
 }
+.fake-app-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.fake-post {
+  background: #fff;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+.fp-user-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.fp-user-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.fp-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+}
+.fp-avatar.marc { background: linear-gradient(135deg, #3B82F6, #2563EB); }
+.fp-avatar.sophie { background: linear-gradient(135deg, #EC4899, #DB2777); }
+.fp-user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.fp-username {
+  font-weight: 700;
+  color: #111827;
+  font-size: 14px;
+}
+.fp-level {
+  background: #DBEAFE;
+  color: #2563EB;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 99px;
+}
+.fp-time {
+  font-size: 12px;
+  color: #9CA3AF;
+}
+.fp-volume {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #6B7280;
+}
+.fp-title {
+  font-weight: 700;
+  font-size: 15px;
+  color: #111827;
+  margin-bottom: 12px;
+}
+.fp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.fp-ex-item {
+  background: #F4F2F7; /* Gris très léger teinté violet */
+  border: 1px solid rgba(124, 58, 237, 0.08);
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+.fp-ex-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fp-ex-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111827;
+}
+.fp-ex-cat {
+  font-size: 11px;
+  font-weight: 500;
+  color: #7C3AED;
+}
+.fp-ex-stats {
+  font-size: 12px;
+  color: #6B7280;
+  margin-top: 4px;
+}
+.fp-desc {
+  font-size: 14px;
+  color: #4B5563;
+  margin-bottom: 14px;
+}
+.fp-divider {
+  border-top: 1px solid #E5E7EB;
+  margin: 0 -16px 12px -16px;
+}
+.fp-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.fp-footer-left {
+  display: flex;
+  gap: 16px;
+}
+.fp-action {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #6B7280;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+.fp-action:hover { color: #111827; }
+.fp-action.active { color: #F59E0B; } /* Couleur Kudo actif */
 
 /* GREEN */
 #green { padding: 100px 0; background: var(--bg); border-top: 1.5px solid var(--text); }
@@ -327,19 +467,16 @@ footer { background: var(--bg-dark); padding: 32px 0; border-top: 1px solid rgba
 .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.55s ease, transform 0.55s ease; }
 .reveal.visible { opacity: 1; transform: none; }
 
-/* RESPONSIVE (Comportement sur Mobile) */
+/* RESPONSIVE */
 @media (max-width: 900px) {
   .nav-links { display: none; }
   #hero { grid-template-columns: 1fr; }
   .hero-left { padding: 60px 32px; }
   .hero-right { min-height: 400px; padding: 40px 32px; }
-  .phone { max-width: 250px; } /* Téléphone un peu plus petit sur mobile */
+  .phone { max-width: 250px; } 
   .features-intro { grid-template-columns: 1fr; gap: 32px; }
   .feat-grid { grid-template-columns: 1fr 1fr; }
-  
-  /* C'est ici que l'image du flux social passe en dessous du texte sur mobile */
   .stephane-inner, .social-inner, .green-inner, .privacy-inner { grid-template-columns: 1fr; gap: 48px; }
-  
   .numbers-grid { grid-template-columns: 1fr 1fr; }
   .footer-inner { flex-direction: column; text-align: center; }
   .footer-links { justify-content: center; flex-wrap: wrap; }
@@ -348,13 +485,14 @@ footer { background: var(--bg-dark); padding: 32px 0; border-top: 1px solid rgba
 @media (max-width: 600px) {
   .feat-grid { grid-template-columns: 1fr; }
   .numbers-grid { grid-template-columns: 1fr; }
+  .fp-grid { grid-template-columns: 1fr; } /* Sur très petit écran, 1 seule colonne pour les exos */
 }
 `;
 
 /* ─────────────────────────────────────────────
    ICONS
 ───────────────────────────────────────────── */
-const DumbbellIcon = ({ size = 18, color = "white" }: { size?: number; color?: string }) => (
+const DumbbellIcon = ({ size = 18, color = "currentColor" }: { size?: number; color?: string }) => (
   <svg viewBox="0 0 24 24" width={size} height={size} fill="none" stroke={color} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
     <circle cx="5.5" cy="12" r="1.5" /><circle cx="18.5" cy="12" r="1.5" />
     <path d="M7 12h10M2 10v4M22 10v4M5.5 10V8M18.5 10V8M5.5 14v2M18.5 14v2" />
@@ -373,6 +511,26 @@ const GitHubIcon = () => (
 const InfoIcon = () => (
   <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
     <circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" />
+  </svg>
+);
+const RssIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M4 11a9 9 0 0 1 9 9" /><path d="M4 4a16 16 0 0 1 16 16" /><circle cx="5" cy="19" r="1" />
+  </svg>
+);
+const KudoIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+  </svg>
+);
+const CommentIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+  </svg>
+);
+const FlagIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" /><line x1="4" y1="22" x2="4" y2="15" />
   </svg>
 );
 
@@ -471,7 +629,7 @@ function Nav() {
     <nav className={scrolled ? "scrolled" : ""}>
       <div className="nav-inner">
         <a className="nav-logo" href="#">
-          <div className="nav-logo-mark"><DumbbellIcon size={18} /></div>
+          <div className="nav-logo-mark"><DumbbellIcon size={18} color="white" /></div>
           <span className="nav-logo-text">Gym Track</span>
         </a>
         <div className="nav-links">
@@ -661,7 +819,7 @@ function Stephane() {
 }
 
 /* ─────────────────────────────────────────────
-   SOCIAL
+   SOCIAL - FAKE FEED
 ───────────────────────────────────────────── */
 function Social() {
   return (
@@ -682,8 +840,121 @@ function Social() {
             </div>
           </div>
 
-          <div className="feed reveal">
-            <img src="./capture2.png" alt="Flux social de l'application Gym Track" />
+          <div className="fake-app-wrapper reveal">
+            <div className="fake-app-header">
+              <RssIcon /> Flux d'activité
+            </div>
+            
+            <div className="fake-app-content">
+              {/* POST MARC */}
+              <div className="fake-post">
+                <div className="fp-user-row">
+                  <div className="fp-user-left">
+                    <div className="fp-avatar marc">M</div>
+                    <div className="fp-user-info">
+                      <span className="fp-username">@marc_fit</span>
+                      <span className="fp-level">Niv.4</span>
+                      <span className="fp-time">il y a 24 minutes</span>
+                    </div>
+                  </div>
+                  <div className="fp-volume">
+                    <DumbbellIcon size={14} color="#6B7280" /> 4520 kg
+                  </div>
+                </div>
+
+                <div className="fp-title">Séance Poussée / Jambes / Cardio</div>
+                
+                <div className="fp-grid">
+                  <div className="fp-ex-item">
+                    <div className="fp-ex-head">
+                      <span className="fp-ex-name">Squat</span>
+                      <span className="fp-ex-cat">Jambes</span>
+                    </div>
+                    <div className="fp-ex-stats">4x90 · 4x90 · 4x90</div>
+                  </div>
+                  <div className="fp-ex-item">
+                    <div className="fp-ex-head">
+                      <span className="fp-ex-name">Développé couché</span>
+                      <span className="fp-ex-cat">Poussée</span>
+                    </div>
+                    <div className="fp-ex-stats">8x70 · 8x70</div>
+                  </div>
+                  <div className="fp-ex-item" style={{ gridColumn: "1 / -1" }}>
+                    <div className="fp-ex-head">
+                      <span className="fp-ex-name">Course à pied</span>
+                      <span className="fp-ex-cat">Cardio</span>
+                    </div>
+                    <div className="fp-ex-stats">20 min · Zone 2</div>
+                  </div>
+                </div>
+
+                <div className="fp-desc">Bonne congestion aujourd'hui !</div>
+                <div className="fp-divider" />
+                
+                <div className="fp-footer">
+                  <div className="fp-footer-left">
+                    <div className="fp-action active"><KudoIcon /> Kudo (3)</div>
+                    <div className="fp-action"><CommentIcon /> Commentaires</div>
+                  </div>
+                  <div className="fp-action"><FlagIcon /></div>
+                </div>
+              </div>
+
+              {/* POST SOPHIE */}
+              <div className="fake-post">
+                <div className="fp-user-row">
+                  <div className="fp-user-left">
+                    <div className="fp-avatar sophie">S</div>
+                    <div className="fp-user-info">
+                      <span className="fp-username">@sophie_str</span>
+                      <span className="fp-level" style={{ background: '#F3E8FF', color: '#7C3AED' }}>Niv.2</span>
+                      <span className="fp-time">il y a 1 heure</span>
+                    </div>
+                  </div>
+                  <div className="fp-volume">
+                    <DumbbellIcon size={14} color="#6B7280" /> 2100 kg
+                  </div>
+                </div>
+
+                <div className="fp-title">Séance Tirage / Bras</div>
+                
+                <div className="fp-grid">
+                  <div className="fp-ex-item">
+                    <div className="fp-ex-head">
+                      <span className="fp-ex-name">Soulevé de terre</span>
+                      <span className="fp-ex-cat">Tirage</span>
+                    </div>
+                    <div className="fp-ex-stats">5x80 · 5x80</div>
+                  </div>
+                  <div className="fp-ex-item">
+                    <div className="fp-ex-head">
+                      <span className="fp-ex-name">Tractions</span>
+                      <span className="fp-ex-cat">Tirage</span>
+                    </div>
+                    <div className="fp-ex-stats">8xPDC · 7xPDC</div>
+                  </div>
+                  <div className="fp-ex-item" style={{ gridColumn: "1 / -1" }}>
+                    <div className="fp-ex-head">
+                      <span className="fp-ex-name">Curl biceps</span>
+                      <span className="fp-ex-cat">Bras</span>
+                    </div>
+                    <div className="fp-ex-stats">12x10 · 12x10</div>
+                  </div>
+                </div>
+
+                <div className="fp-desc">Le deadlift monte doucement 🚀</div>
+                <div className="fp-divider" />
+                
+                <div className="fp-footer">
+                  <div className="fp-footer-left">
+                    <div className="fp-action"><KudoIcon /> Kudos</div>
+                    <div className="fp-action"><CommentIcon /> Commentaires</div>
+                  </div>
+                  <div className="fp-action"><FlagIcon /></div>
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
       </div>
@@ -811,7 +1082,7 @@ function Footer({ onOpenModal }: { onOpenModal: () => void }) {
       <div className="container">
         <div className="footer-inner">
           <a className="footer-logo" href="#">
-            <div className="footer-logo-mark"><DumbbellIcon size={14} /></div>
+            <div className="footer-logo-mark"><DumbbellIcon size={14} color="white" /></div>
             <span className="footer-logo-text">Gym Track</span>
           </a>
           <div className="footer-links">
