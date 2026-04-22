@@ -484,7 +484,7 @@ function Hero() {
 
       <div className="hero-right">
         <div className="phone">
-          <img src="capture1.jpeg" alt="Capture d'écran de l'application Gym Track" />
+          <img src="./capture1.jpeg" alt="Capture d'écran de l'application Gym Track" />
         </div>
       </div>
     </section>
@@ -643,7 +643,7 @@ function Social() {
           </div>
 
           <div className="feed reveal">
-            <img src="capture2.png" alt="Flux social de l'application Gym Track" />
+            <img src="./capture2.png" alt="Flux social de l'application Gym Track" />
           </div>
         </div>
       </div>
