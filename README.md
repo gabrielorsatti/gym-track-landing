@@ -2,9 +2,9 @@
 
 Bienvenue sur le dépôt du site marketing de **Stéphane-IA**, l'application de fitness Social-First propulsée par l'intelligence artificielle.
 
-## 🌐 Liens Utiles
-- **Site Live :** [https://gym-track-landing-2iys.vercel.app/](https://gym-track-landing-2iys.vercel.app/)
-- **Lancer l'Application :** (https://gabrielorsatti.github.io/stephane-ia-app/)
+## Liens Utiles
+- **Site Live :** [https://stephane.fit](https://stephane.fit)
+- **Lancer l'Application :** [https://app.stephane.fit](https://app.stephane.fit)
 
 ---
 
@@ -23,14 +23,27 @@ Au cœur de l'expérience, **Stéphane** analyse les performances de l'utilisate
 ---
 
 ## Tech Stack
-Ce site vitrine a été conçu avec les technologies les plus modernes pour garantir performance et accessibilité :
 
-- **Framework :** [React 18](https://reactjs.org/) + [TypeScript](https://www.typescriptlang.org/)
-- **Build Tool :** [Vite 6](https://vitejs.dev/)
-- **Styling :** [Tailwind CSS v4](https://tailwindcss.com/) (Moteur haute performance)
+- **Framework :** [React](https://reactjs.org/) + [TypeScript](https://www.typescriptlang.org/)
+- **Build Tool :** [Vite](https://vitejs.dev/)
+- **Styling :** [Tailwind CSS v4](https://tailwindcss.com/)
 - **Icons :** [Lucide React](https://lucide.dev/)
-- **Déploiement :** [Vercel](https://vercel.com)
+- **Déploiement :** [Cloudflare Pages](https://pages.cloudflare.com/)
+
+## Déploiement (Cloudflare Pages)
+
+Le site est déployé sur **Cloudflare Pages** avec le domaine personnalisé `stephane.fit`.
+
+**Configuration du build :**
+| Paramètre | Valeur |
+|---|---|
+| Build command | `npm run build` |
+| Build output directory | `dist` |
+| Node.js version | 18+ |
+
+Les fichiers `public/_redirects` et `public/_headers` gèrent respectivement le routing SPA et la mise en cache des assets sur le CDN Cloudflare.
 
 ---
+
 ## Engagement Green IT & Confidentialité
 Le projet intègre des mesures de transparence sur l'impact carbone des requêtes IA et garantit qu'aucune donnée de santé n'est vendue ou utilisée à des fins publicitaires.
