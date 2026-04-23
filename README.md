@@ -4,7 +4,7 @@ Bienvenue sur le dépôt du site marketing de **Stéphane-IA**, l'application de
 
 ## 🌐 Liens Utiles
 - **Site Live :** [https://gym-track-landing-2iys.vercel.app/](https://gym-track-landing-2iys.vercel.app/)
-- **Lancer l'Application :** [(https://gabrielorsatti.github.io/stephane-ia-app/)]
+- **Lancer l'Application :** (https://gabrielorsatti.github.io/stephane-ia-app/)
 
 ---
 
