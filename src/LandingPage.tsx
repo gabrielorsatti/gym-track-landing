@@ -499,6 +499,10 @@ footer { background: var(--bg-dark); padding: 32px 0; border-top: 1px solid rgba
   .feat-grid { grid-template-columns: 1fr; }
   .numbers-grid { grid-template-columns: 1fr; }
   .fp-grid { grid-template-columns: 1fr; }
+  .fp-user-row { flex-wrap: wrap; gap: 8px; }
+  .fp-user-info { flex-wrap: wrap; gap: 4px 8px; }
+  .fp-volume { font-size: 12px; }
+  .fake-post { padding: 12px; }
 }
 `;
 
